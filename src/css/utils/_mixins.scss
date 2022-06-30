@@ -1,18 +1,16 @@
-@mixin h1($color: $white) {
-  font-size: 4rem;
+@mixin h1($color: $black) {
+  font-size: 3rem;
   color: $color;
-  font-family: $mainFont;
-  text-shadow: $mainShadow;
-  margin-bottom: 1.8rem;
+  font-family: $titleFont1;
 
   @media ($tablet) {
-    font-size: 5.9rem;
-    margin-bottom: 3rem;
+    font-size: 4.8rem;
   }
 }
-@mixin h2($color: $primaryColor, $align: center) {
+@mixin h2($color: $black) {
   color: $color;
   font-size: 3rem;
+  
   text-align: $align;
   line-height: 1.2;
   margin-bottom: 3rem;

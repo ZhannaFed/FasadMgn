@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100mm" height="100mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 10000 10000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#372228;stroke-width:200}
+    .str1 {stroke:#372228;stroke-width:200;stroke-linecap:round;stroke-linejoin:round}
+    .fil1 {fill:#FEFEFE}
+    .fil2 {fill:#FEFEFE}
+    .fil3 {fill:#372228}
+    .fil0 {fill:#CDDC39}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0 str0" d="M1196 1035l1900 -506c122,-33 248,40 280,162l1341 5034c32,122 -41,248 -163,281l-1900 506c-122,32 -248,-41 -280,-163l-1341 -5034c-32,-122 41,-248 163,-280z"/>
+  <path class="fil1 str0" d="M3266 986l1950 253c125,16 214,132 198,257l-671 5166c-17,125 -132,214 -257,198l-1950 -254c-125,-16 -214,-131 -198,-256l671 -5167c17,-125 132,-214 257,-197z"/>
+  <path class="fil2 str0" d="M5032 1601l1740 918c111,59 154,198 95,310l-2431 4607c-59,112 -198,155 -309,96l-1740 -918c-111,-58 -154,-198 -95,-309l2431 -4608c59,-111 198,-154 309,-96z"/>
+  <path class="fil0" d="M3462 6160c184,-49 372,60 421,244 48,183 -61,371 -244,420 -183,49 -371,-60 -420,-244 -49,-183 60,-371 243,-420z"/>
+  <path class="fil0 str0" d="M7523 7239l-166 243c-15,22 -44,28 -66,13l-2555 -1743c-22,-15 -27,-45 -13,-66l166 -243c15,-22 45,-27 66,-13l2555 1743c22,15 27,45 13,66z"/>
+  <path class="fil0 str1" d="M5687 7977l0 0zm0 0l-678 899c-54,70 -162,-40 -301,-135 -27,-18 -33,-54 -16,-81l559 -876 -593 804c-32,43 -92,56 -137,26l-470 -321c-44,-30 -54,-91 -26,-137l446 -741 -547 672c-34,42 -92,57 -136,26l-411 -280c-44,-30 -56,-92 -25,-136l1229 -1803c73,-107 197,15 310,93l2245 1531c54,37 68,111 31,165l-1207 1769c-37,54 -111,68 -165,31l-566 -386c-54,-37 -49,-100 -20,-158l478 -962zm-435 -194l0 0zm-781 -368l0 0z"/>
+  <path class="fil3" d="M7311 5382l122 631 215 1121 -1338 -913 -1339 -913 1123 -208 630 -117 1158 -1937c191,-280 525,-383 747,-232 222,151 247,500 55,782l-1373 1786zm1112 -2008c-92,135 -219,209 -284,165 -64,-43 -42,-189 51,-324 92,-135 219,-209 283,-165 65,44 42,189 -50,324z"/>
+ </g>
+</svg>

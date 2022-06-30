@@ -4,9 +4,15 @@
 
 .container {
   width: 100%;
-  max-width: 118rem;
+  max-width: 136.6rem;
   margin: 0 auto;
 }
 body{
-  background: $green;
+  background: $white;
+}
+h1{
+  @include h1();
+}
+p{
+  font-family: $mainFont;
 }

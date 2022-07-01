@@ -2,4 +2,9 @@
     height:136px;
     width:1336px;
     background-color: $black;
+    display:flex;
+
+    &_logo{
+        @include h1($color: $white);
+    }
 }

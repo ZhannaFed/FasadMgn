@@ -1,10 +1,60 @@
 .header{
-    height:136px;
+    height:260px;
     width:1336px;
     background-color: $black;
     display:flex;
+    flex-direction: column;
+
+    @media($tablet){
+        height:136px;
+        flex-direction: row;
+    }
 
     &_logo{
         @include h1($color: $white);
+        margin-left: 15.3rem;
+        margin-top: 1.8rem;
+    }
+    &_content{
+        display: flex;
+    }
+    
+    &_address{
+        display:flex;
+        margin-left: 8.3rem;
+        margin-top: 2.8rem;
+        @media($tablet){
+        margin-left: 15.3rem;  
+        }       
+    }
+
+    &_address-text{
+        @include p1($color: $white);
+        width:350px;
+        @media ($tablet){
+            width:220px;
+        }
+    }
+    &_address-icon{
+        height: 170px;
+        width: 170px;
+        margin-top: -70px;
+        margin-right: -50px;
+    }
+    &_phones{
+        display: flex;
+        margin-left: 4rem;
+        margin-top: 2.8rem;
+    }
+    &_phones-text > p{
+        @include p1($color: $white);      
+    }
+
+    &_phones-icon{
+        height: 90px;
+        width: 90px;
+        margin-top: -30px;
+        margin-right: -10px;
+
     }
 }

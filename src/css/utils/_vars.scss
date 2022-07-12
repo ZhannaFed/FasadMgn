@@ -2,6 +2,10 @@
 $white: #fff;
 $black: #000;
 $orange: #dda046;
+$grey:#f4f4f4;
+$light:rgba(255, 255, 255, 0.6);
+$btnGradient:linear-gradient(to bottom, #ffdc83 0%, #fbd26a 25%, #c17024 85%, #e3a548 100%);
+
 $primaryColor: #445161;
 $secondaryColor: #445162;
 $textColor: #333333;
@@ -15,6 +19,8 @@ $mainFont: "robotoregular";
 //screens
 $tablet: "min-width: 767px";
 $desktop: "min-width: 1024px";
-$projector: "min-width:1200px";
+$laptopLarge: "min-width:1440px";
+
 //shadows
-//$mainShadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.3);
+$offerShadow:0 0 74px 0 rgba(39, 17, 10, 0.16);
+$btnShadow:0 0 62px 0 #d3be88;

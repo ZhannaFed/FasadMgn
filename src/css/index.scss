@@ -2,14 +2,24 @@
 @import "./components";
 @import "./layout";
 
-.container {
-  width: 100%;
-  max-width: 136.6rem;
-  margin: 0 auto;
-}
-body{
+
+html,body{
   background: $white;
+  width: 100vw;
+  height: 100vh;
 }
+main,header,footer{
+  width: 100%;
+}
+
+.container { 
+  margin: 0 auto;
+  width: 100%;
+  @media($laptopLarge){
+    width: 1366px;
+  }
+}
+
 h1{
   @include h1();
 }

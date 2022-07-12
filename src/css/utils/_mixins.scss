@@ -1,32 +1,49 @@
 //use
 @mixin h1($color: $black) {
-  font-size: 7rem;
+  font-size: 4.8rem;
   color: $color;
   font-family: $titleFont1;
   line-height: normal;
 
   @media ($tablet) {
-    font-size: 3.8rem;
+    font-size: 4.8rem;
+  }
+}
+//use
+@mixin h2($color: $black) {
+  color: $color;
+  font-size: 4rem;
+  font-family: $mainFont;
+  text-align: center;
+
+  @media ($tablet){
+    font-size: 4.8rem;
+  }
+}
+//use
+@mixin h3($color: $black) {
+  color: $color;
+  font-size: 2.8rem;
+  font-family: $titleFont2;
+
+  @media ($tablet){
+    font-size: 2.8rem;
+  }
+}
+//use
+@mixin h4($color: $black) {
+  color: $color;
+  font-size: 2rem;
+  font-family: $titleFont2;
+
+  @media ($tablet){
+    font-size: 2rem;
   }
 }
 
-@mixin h2($color: $black) {
-  color: $color;
-  font-size: 3rem;
-  
-  text-align: $align;
-  line-height: 1.2;
-  margin-bottom: 3rem;
-  font-weight: normal;
-}
-@mixin h3($color: $primaryColor) {
-  color: $color;
-  font-size: 2.4rem;
-  line-height: 1.25;
-}
 //use
 @mixin p1($color: $black) {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: $color;
   font-family: $titleFont1;
 
@@ -34,23 +51,17 @@
     font-size: 1.8rem;
   }
 }
-
-@mixin p2($color: $textColor) {
+//use
+@mixin p2($color: $black) {
   font-size: 1.4rem;
   color: $color;
-  line-height: 1.29;
+  font-family: $mainFont;
+
+  @media ($tablet) {
+    font-size: 1.8rem;
+  }
 }
-@mixin lead($color: $white) {
-  font-size: 2rem;
-  color: $color;
-  line-height: 1.8;
-  text-shadow: $mainShadow;
-}
-@mixin img($bg: $primaryColor) {
-  background-color: $bg;
-  object-fit: cover;
-  object-position: center;
-}
+
 @mixin section($pt: 5rem, $pb: 5rem) {
   padding-top: $pt;
   padding-bottom: $pb;
@@ -81,16 +92,17 @@
   height: 17rem;
   font-family: $mainFont;
 }
-
+//use
 %btn {
   display: inline-block;
-  background-color: $white;
-  color: $primaryColor;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
+  width: 200px;
+  height:46px;
+  box-shadow: $btnShadow;
+  background-image: $btnGradient;
+  color: $black;
+  font-family: $mainFont;
+  font-size: 1.6rem;
+  padding: 11.4px 35.5px 15.6px 33.2px;
   cursor: pointer;
   border: none;
   text-align: center;
@@ -99,7 +111,8 @@
   border-radius: 5px;
 
   &:hover {
-    background-color: darken($white, 20%);
+    background-image:none;
+    background-color: $white;
   }
   &:focus {
     outline: none;

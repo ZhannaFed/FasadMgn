@@ -1,0 +1,21 @@
+.offers{
+    background-color:$grey;
+    // width: 100%;
+    &_wrapper{
+        
+    }
+    &_title{
+        @include h2();
+        padding-top: 6rem;
+         margin-bottom: 6rem;
+        
+    }
+    &_content{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+     
+    }
+    
+}

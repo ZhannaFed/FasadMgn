@@ -1,0 +1,12 @@
+.contact{
+   position: relative;
+    &_icon{
+        position: absolute;
+        top:-61px;
+    }
+    &_text{
+        @include p1($white);
+        margin-left: 10rem;
+        width: 210px;
+    }
+}

@@ -1,0 +1,19 @@
+.advantages{
+    background-color:$grey;
+    &_elements{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media($tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        }
+
+    &_title{
+        @include h2();
+        padding-top: 6rem;
+        margin-bottom: 6rem;
+    }
+}

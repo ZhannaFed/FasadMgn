@@ -1,0 +1,19 @@
+.examples{
+    background-color:$grey;
+    padding-bottom: 6rem;
+    &_title{
+        @include h2();
+        padding-top: 6rem;
+        margin-bottom: 6rem;
+    }
+    &_content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:3px;
+        &-img{
+            width: 453px;
+            height: 426px;
+        }
+    }
+}

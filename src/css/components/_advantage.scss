@@ -24,7 +24,7 @@
     &_content{
         margin-left: 2.2rem;
         &-title{
-            @include h4();
+            @include h5();
             width:300px;
         }
         &-text{

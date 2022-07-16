@@ -1,0 +1,7 @@
+.footer{
+    height: 100px;
+    &_text{
+        @include p2($white);
+        padding-top: 5rem;
+    }
+}

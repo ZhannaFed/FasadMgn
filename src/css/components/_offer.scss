@@ -10,7 +10,7 @@
     box-shadow: $offerShadow;
            
     &_title{
-        @include h3();
+        @include h4();
         width: 241px;
         margin-top: 4.4rem;
         margin-left: 3.2rem;

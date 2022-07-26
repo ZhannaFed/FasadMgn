@@ -3778,10 +3778,25 @@ exports.tns = tns;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
+
+
+
+console.log("Fasad");
+
+/***/ }),
+
+/***/ "./src/js/slider.js":
+/*!**************************!*\
+  !*** ./src/js/slider.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider */ "./node_modules/tiny-slider/dist/tiny-slider.js");
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tiny_slider__WEBPACK_IMPORTED_MODULE_0__);
-
-
 
 Object(tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
   container: '.slider_content',
@@ -3794,7 +3809,6 @@ Object(tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
   autoplayButton: '#autoplay',
   navContainer: '#nav_slider'
 });
-console.log("Fasad");
 
 /***/ })
 

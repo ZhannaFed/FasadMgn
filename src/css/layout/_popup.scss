@@ -1,0 +1,52 @@
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.6);
+    &_content{
+    // display: none; 
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 40rem;
+    background-color:$white;
+    }
+    &_form{
+        width: 400px;
+        height:400px;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:3rem;
+            align-items: center;
+        }
+        h5{
+            @include h5();
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .form_input{
+            @extend %input;
+        }
+        .form_button{
+            @extend %btn;
+        }
+    }
+    &_close{
+        border:none;
+        background: transparent;
+        font-size: 4rem;
+        color:$orange;
+        position: absolute;
+        top: -2.2rem;
+        right: -5rem;
+        cursor:pointer;
+    }
+}

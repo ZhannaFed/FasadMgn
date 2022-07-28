@@ -1,6 +1,6 @@
 .header {
     // background-color: $black;
-    height:220px;
+    height:250px;
 
     @media($desktop){
         height: 150px;
@@ -32,13 +32,19 @@
         flex-direction: column;
         margin-top: 1.5rem;
         margin-left: 0;
-        gap:1rem;
+        gap:1rem;        
 
         @media($tablet){
             flex-direction: row;
             gap: 0;
             margin-left: 5rem;
             margin-top: 3.5rem;
+        }
+        &-callbtn{
+            @extend %btn;
+            margin-left: 7rem;
+            margin-top: 1rem;
+            
         }
     }
     

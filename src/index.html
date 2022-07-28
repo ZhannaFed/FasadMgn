@@ -20,6 +20,7 @@
                 <div class="contact">
                     <img class="contact_icon" src="./assets/images/icons/phone_icon.png" />
                     <p class="contact_text">+7(999)999-99-99 +7(999)888-99-99</p>
+                    <input class="header_contacts-callbtn" type="button" value="Заказать звонок" />
                 </div>
             </div>
         </div>            
@@ -203,6 +204,24 @@
         </div>
         
     </footer>
+     <!-- Modals -->
+    <!-- Request a call -->
+    <div class="popup" data-modal>
+        <div class="popup_dialog">
+            <div class="popup_content text-center">
+                <button type="button" class="popup_close"><strong>&times;</strong></button>
+                <div class="popup_form">
+                    <form class="form" action="#">
+                      <h5>Введите ваши данные <br>и нажмите заказать звонок</h5>
+                        <input class="form-control form_input" name="user_name" required type="text" placeholder="Введите ваше имя">
+                        <input class="form-control form_input" name="user_phone" required type="text" placeholder="Введите телефон">
+                        <button class="form_button" name="submit" type="submit">Заказать звонок</button>
+                        <!-- <p class="form_notice">Перезвоним в течение 10 минут</p> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

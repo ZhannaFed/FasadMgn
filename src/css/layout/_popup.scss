@@ -16,10 +16,19 @@
     transform: translateX(-50%);
     width: 40rem;
     background-color:$white;
-    }
-    &_form{
+    width: 240px;
+    height:350px;
+     @media($mobileLarge){
+        width: 300px;
+        height:350px;
+     }   
+    @media($tablet){
         width: 400px;
         height:400px;
+    }
+    }
+    &_form{
+        
         form{
             display: flex;
             flex-direction: column;

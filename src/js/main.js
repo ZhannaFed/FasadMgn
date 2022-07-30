@@ -1,5 +1,8 @@
 'use strict';
 
 import './slider';
+import modals from './modules/modals';
 
-console.log("Fasad");
+window.addEventListener('DOMContentLoaded', () =>{
+  modals();
+});

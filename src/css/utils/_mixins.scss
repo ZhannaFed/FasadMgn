@@ -43,8 +43,12 @@
 //use
 @mixin h5($color: $black) {
   color: $color;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: $titleFont2;
+
+  @media($mobileLarge){
+    font-size: 2rem;
+  }
 
   @media ($tablet){
     font-size: 2rem;
@@ -84,7 +88,7 @@
 }
 //use
 %input {
-  width: 100%;
+  width: 200px;
   height: 50px;
   box-shadow: inset 1px 1px 12px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(255, 255, 255, 0.33);
@@ -94,8 +98,8 @@
   line-height: 1;
   border: none;
 
-  @media($mobile){
-    width: 300px
+  @media($mobileLarge){
+    width: 250px
   }
   @media($tablet){
     width: 350px;

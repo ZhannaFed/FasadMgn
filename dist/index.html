@@ -180,10 +180,10 @@
                     <form class="askForm" action="" method="get">
                         <h3 class="askForm_title">Задать вопрос</h3>
                         <p class="askForm_text">Оставьте заяву и наш специалист свяжется с Вами в ближайшее время: </p>
-                        <input type="text" class="askForm_name" placeholder="Ваше имя">
-                        <input type="text" class="askForm_phone" placeholder="Телефон">
-                        <textarea cols="30" rows="10" class="askForm_question" placeholder="Ваш вопрос"></textarea>
-                        <input class="askForm_btn" type="button" value="Отправить" />
+                        <input type="text" class="askForm_name" name="name" required placeholder="Ваше имя">
+                        <input type="text" class="askForm_phone" name="phone" required placeholder="Телефон">
+                        <textarea cols="30" rows="10" class="askForm_question" name="text" placeholder="Ваш вопрос"></textarea>
+                        <button class="askForm_btn" type="submit">Отправить</button>
                     </form>
                     <div class="contactsSection">
                         <div class="contactsSection_contacts">

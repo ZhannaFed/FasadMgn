@@ -47,6 +47,19 @@
         .form_button{
             @extend %btn;
         }
+        .status_load{
+            display: block;
+            margin: 0 auto;
+        }
+        .status_ok{
+            font-size: 1.8rem;
+            font-family: $titleFont2;
+        }
+        .status_failure{
+            font-size: 1.8rem;
+            font-family: $titleFont2;
+            color:red;
+        }
     }
     &_close{
         border:none;

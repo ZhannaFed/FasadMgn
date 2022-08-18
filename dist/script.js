@@ -3799,6 +3799,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 /* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+/* harmony import */ var _modules_formSend__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/formSend */ "./src/js/modules/formSend.js");
+
 
 
 
@@ -3806,7 +3808,84 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_formSend__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/formSend.js":
+/*!************************************!*\
+  !*** ./src/js/modules/formSend.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modals */ "./src/js/modules/modals.js");
+
+
+const formSend = () => {
+  const forms = document.querySelectorAll('form');
+  forms.forEach(item => {
+    postData(item);
+  });
+  const message = {
+    loading: 'assets/images/icons/spinner.svg',
+    success: 'Спасибо! Скоро мы с Вами свяжемся',
+    failure: 'Что-то пошло не так...'
+  };
+
+  function postData(form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const statusMessage = document.createElement('div');
+      const statusMessageImg = document.createElement('img');
+      statusMessageImg.src = message.loading;
+      statusMessage.classList.add('status_load');
+      statusMessage.append(statusMessageImg);
+      form.append(statusMessage);
+      const request = new XMLHttpRequest();
+      request.open('POST', 'server.php');
+      request.setRequestHeader('Content-type', 'application/json');
+      const formData = new FormData(form);
+      const object = {};
+      formData.forEach(function (value, key) {
+        object[key] = value;
+      });
+      const json = JSON.stringify(object);
+      request.send(json);
+      request.addEventListener('load', () => {
+        if (request.status === 200) {
+          console.log(request.response);
+          statusMessageImg.remove();
+
+          if (statusMessage.classList.contains('status_failure')) {
+            statusMessage.classList.remove('status_failure');
+          }
+
+          statusMessage.classList.add('status_ok');
+          statusMessage.textContent = message.success;
+          form.reset();
+          setTimeout(() => {
+            statusMessage.remove();
+          }, 6000);
+        } else {
+          statusMessageImg.remove();
+
+          if (statusMessage.classList.contains('status_ok')) {
+            statusMessage.classList.remove('status_ok');
+          }
+
+          statusMessage.classList.add('status_failure');
+          statusMessage.textContent = message.failure;
+        }
+      });
+    });
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (formSend);
 
 /***/ }),
 

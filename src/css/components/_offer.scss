@@ -8,6 +8,7 @@
     justify-content: space-between;
     background-color:$light;
     box-shadow: $offerShadow;
+    transition: background 0.5s;
            
     &_title{
         @include h4();
@@ -38,6 +39,7 @@
         border-radius:50%;
         height: 27.6px;
         width: 27.6px;
+        transition: background 0.5s;
         }
 
     &:hover{

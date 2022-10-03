@@ -3828,7 +3828,7 @@ __webpack_require__.r(__webpack_exports__);
 const formSend = () => {
   const forms = document.querySelectorAll('form');
   forms.forEach(item => {
-    postData(item);
+    bindPostData(item);
   });
   const message = {
     loading: 'assets/images/icons/spinner.svg',
@@ -3836,7 +3836,18 @@ const formSend = () => {
     failure: 'Что-то пошло не так...'
   };
 
-  function postData(form) {
+  const postData = async (url, data) => {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: data
+    });
+    return await res.json();
+  };
+
+  function bindPostData(form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const statusMessage = document.createElement('div');
@@ -3845,44 +3856,46 @@ const formSend = () => {
       statusMessage.classList.add('status_load');
       statusMessage.append(statusMessageImg);
       form.append(statusMessage);
-      const request = new XMLHttpRequest();
-      request.open('POST', 'server.php');
-      request.setRequestHeader('Content-type', 'application/json');
-      const formData = new FormData(form);
-      const object = {};
-      formData.forEach(function (value, key) {
-        object[key] = value;
-      });
-      const json = JSON.stringify(object);
-      request.send(json);
-      request.addEventListener('load', () => {
-        if (request.status === 200) {
-          console.log(request.response);
-          statusMessageImg.remove();
+      const formData = new FormData(form); // Используя обЪект
+      // const object = {};
+      // formData.forEach(function(value, key){
+      //     object[key] = value;
+      // });
+      // Используя методы Object.entries() и Object.fromEntries()
 
-          if (statusMessage.classList.contains('status_failure')) {
-            statusMessage.classList.remove('status_failure');
-          }
+      const json = JSON.stringify(Object.fromEntries(formData.entries()));
+      postData('http://localhost:3000/requests', json).then(data => {
+        console.log(data);
+        statusMessageImg.remove();
 
-          statusMessage.classList.add('status_ok');
-          statusMessage.textContent = message.success;
-          form.reset();
-          setTimeout(() => {
-            statusMessage.remove();
-          }, 6000);
-        } else {
-          statusMessageImg.remove();
-
-          if (statusMessage.classList.contains('status_ok')) {
-            statusMessage.classList.remove('status_ok');
-          }
-
-          statusMessage.classList.add('status_failure');
-          statusMessage.textContent = message.failure;
+        if (statusMessage.classList.contains('status_failure')) {
+          statusMessage.classList.remove('status_failure');
         }
+
+        statusMessage.classList.add('status_ok');
+        statusMessage.textContent = message.success;
+        setTimeout(() => {
+          statusMessage.remove();
+        }, 6000);
+      }).catch(() => {
+        statusMessageImg.remove();
+
+        if (statusMessage.classList.contains('status_ok')) {
+          statusMessage.classList.remove('status_ok');
+        }
+
+        statusMessage.classList.add('status_failure');
+        statusMessage.textContent = message.failure;
+        setTimeout(() => {
+          statusMessage.remove();
+        }, 6000);
+      }).finally(() => {
+        form.reset();
       });
     });
   }
+
+  fetch('http://localhost:3000/menu').then(data => data.json()).then(res => console.log(res));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (formSend);

@@ -1,0 +1,12 @@
+{
+    "menu":[
+        {
+            "img": "img/tabs/vegy.jpg",
+            "altimg": "vegy",
+            "title": "Меню Фитнес" 
+        }
+    ],
+    "requests": [
+
+    ]
+}
